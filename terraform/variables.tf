@@ -78,8 +78,13 @@ variable "db_username" {
 
 variable "db_password" {
   type        = string
-  description = "Senha master dos RDS (use secrets manager em produção)."
+  description = "Senha master dos RDS (use secrets manager em produção). Não pode conter: / @ \" ou espaço."
   sensitive   = true
+
+  validation {
+    condition     = !can(regex("[/@\" ]", var.db_password))
+    error_message = "db_password não pode conter os caracteres '/', '@', '\"' ou espaço (restrição do RDS)."
+  }
 }
 
 variable "rds_instance_class" {
