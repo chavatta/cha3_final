@@ -6,7 +6,7 @@ use_lab_role  = true
 lab_role_name = "LabRole"
 
 # Senha forte para os 3 RDS (use TF_VAR_db_password no CI ou arquivo ignorado pelo git)
-db_password = "D37eas45@10458845"
+db_password = "D37eas4510458845"
 
 # Desligue na primeira apply se o provider Kubernetes falhar antes do cluster existir
 # enable_argocd = false
