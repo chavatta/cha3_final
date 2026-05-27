@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/kellfigueiredo/tech_challenge_3.git
+    repoURL: https://github.com/chavatta/cha3_final
     targetRevision: main
     path: gitops/apps/evaluation
   destination:
