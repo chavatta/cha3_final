@@ -9,7 +9,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/chavatta/cha3_final
+    repoURL: https://github.com/chavatta/cha3_final.git
     targetRevision: main
     path: gitops/apps/auth
   destination:

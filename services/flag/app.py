@@ -140,6 +140,7 @@ def get_flags():
             pool.putconn(conn)
 
 @app.route('/flags/<string:name>', methods=['GET'])
+@require_auth
 def get_flag(name):
     """ Busca uma feature flag específica pelo nome (GET /flags/health sem auth — evita conflito com /<name>). """
     if name == 'health':
@@ -147,7 +148,6 @@ def get_flag(name):
     return _get_flag_by_name(name)
 
 
-@require_auth
 def _get_flag_by_name(name):
     """ Busca uma feature flag específica pelo nome """
     conn = None
